@@ -1,8 +1,12 @@
 import React from 'react';
+import MERNLogo from './MERNLogo';
 
 const Footer = () => {
     return (
         <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 py-8 text-center text-base">
+            <div className='mb-2'>
+                <MERNLogo></MERNLogo>
+            </div>
             <div className="mb-2">
                 &copy; {new Date().getFullYear()} Khan Mahmud Arif Rabbani. All rights reserved.
             </div>

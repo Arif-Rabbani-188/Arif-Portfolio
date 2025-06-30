@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SiGithub, SiLinkedin, SiMailboxdotorg, SiMaildotcom, SiWhatsapp } from 'react-icons/si';
+import MERNLogo from './MERNLogo';
 
 
 
@@ -8,8 +9,8 @@ const Navbar = () => {
 
     return (
         <nav className={`flex py-5 items-center px-4 bg-gray-300 text-gray-900 sticky top-0 z-50 shadow-lg backdrop-blur-md ${menuOpen ? "fixed w-full left-0 top-0" : ""}`}>
-            <div className="font-extrabold text-2xl sm:text-3xl tracking-widest flex items-center gap-2">
-                <span className="text-cyan-900 px-2 py-1 border-cyan-900 border-3 rounded-lg md:ml-10">ARIF.DEV</span>
+            <div className='ml-2 md:ml-10'>
+                <MERNLogo></MERNLogo>
             </div>
             <div className="ml-auto flex items-center gap-4">
                 {/* Desktop Menu */}

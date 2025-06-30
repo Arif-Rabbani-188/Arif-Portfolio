@@ -1,10 +1,6 @@
 import React from 'react';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap, FaFigma } from 'react-icons/fa';
-import { SiRedux, SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiVercel, SiPostman, SiNpm, SiAxios } from 'react-icons/si';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useRef } from 'react';
+import { SiRedux, SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiVercel, SiPostman, SiNpm, SiAxios, SiSocketdotio } from 'react-icons/si';
 
 const skillList = [
     { name: 'React.js', icon: <FaReact className="text-sky-500" /> },
@@ -24,37 +20,9 @@ const skillList = [
     { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
 ];
 
-const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: { slidesToShow: 3, slidesToScroll: 2 }
-        },
-        {
-            breakpoint: 600,
-            settings: { slidesToShow: 2, slidesToScroll: 1 }
-        },
-        {
-            breakpoint: 480,
-            settings: { slidesToShow: 1, slidesToScroll: 1 }
-        }
-    ]
-};
-
 const Skills = () => {
-    const marqueeRef = useRef(null);
-
     return (
-        <section className="bg-slate-50 rounded-2xl p-8 w-full mx-auto shadow-lg overflow-hidden py-32 items-center justify-center">
+        <section className="bg-slate-50 rounded-2xl md:p-8 w-full mx-auto shadow-lg overflow-hidden py-32 items-center justify-center">
             <div className="flex items-center justify-center mb-8">
                 <span className="block w-16 h-1 bg-gradient-to-r from-sky-400 to-purple-500 rounded-full mr-4"></span>
                 <h2 className="text-center text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-purple-600 tracking-wide uppercase drop-shadow-lg">
@@ -62,46 +30,17 @@ const Skills = () => {
                 </h2>
                 <span className="block w-16 h-1 bg-gradient-to-l from-sky-400 to-purple-500 rounded-full ml-4"></span>
             </div>
-            <div
-                ref={marqueeRef}
-                className="relative w-full overflow-hidden"
-                style={{ height: '220px' }}
-            >
-                <div
-                    className="flex animate-marquee"
-                    style={{
-                        width: 'max-content',
-                        animation: 'marquee 18s linear infinite'
-                    }}
-                >
-                    {skillList.concat(skillList).map((skill, idx) => (
-                        <div key={skill.name + idx} className="px-4">
-                            <div
-                                className="flex flex-col items-center bg-white rounded-2xl shadow-xl justify-center border border-slate-100 hover:scale-105 hover:shadow-2xl transition-all duration-300"
-                                style={{
-                                    width: '160px',
-                                    height: '180px',
-                                    padding: '2rem'
-                                }}
-                            >
-                                <span className="text-5xl mb-4 drop-shadow-lg">{skill.icon}</span>
-                                <span className="text-lg font-bold text-slate-800 tracking-wide">{skill.name}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <div className="w-full flex flex-wrap justify-center gap-3 md:gap-8">
+                {skillList.map((skill, idx) => (
+                    <div
+                        key={skill.name + idx}
+                        className="flex flex-col items-center bg-white rounded-2xl shadow-xl justify-center border border-slate-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 w-[88px] h-[90px]  md:w-[160px] md:h-[180px] text-center text-slate-700 hover:text-sky-600"
+                    >
+                        <span className="text-2xl md:text-5xl mb-4 drop-shadow-lg">{skill.icon}</span>
+                        <span className="text-sm md:text-lg font-bold text-slate-800 tracking-wide">{skill.name}</span>
+                    </div>
+                ))}
             </div>
-            <style>
-                {`
-                @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                }
-                .animate-marquee {
-                    display: flex;
-                }
-                `}
-            </style>
         </section>
     );
 };

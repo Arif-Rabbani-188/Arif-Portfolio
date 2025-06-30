@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SiGithub, SiLinkedin, SiMailboxdotorg, SiWhatsapp } from "react-icons/si";
+import { send } from 'emailjs-com';
 
 const SendMail = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -9,14 +10,28 @@ const SendMail = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-    setTimeout(() => {
-      setStatus("Message sent! Thank you for reaching out.");
-      setForm({ name: "", email: "", message: "" });
-    }, 1500);
+    try {
+        await send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            {
+            name: form.name,
+            email: form.email,
+            time: new Date().toLocaleString(),
+            message: form.message,
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+        setStatus("Message sent! Thank you for reaching out.");
+        setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+        setStatus("Failed to send message. Please try again later.");
+    }
   };
+ 
 
   return (
     <section className="p-8 flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-3xl shadow-2xl">
