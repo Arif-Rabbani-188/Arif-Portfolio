@@ -10,7 +10,7 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="relative min-h-screen overflow-hidden shadow-2xl bg-gradient-to-r from-[#0a2342] via-[#193660] to-[#2e3a59] py-10 px-3 md:py-16 md:px-12 lg:px-32 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-5 justify-between">
+            <div className="relative overflow-hidden shadow-2xl bg-gradient-to-r from-[#0a2342] via-[#193660] to-[#2e3a59] py-10 px-3 md:py-16 md:px-12 lg:px-32 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-5 justify-between">
                 {/* Decorative SVGs */}
                 <svg
                     className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"

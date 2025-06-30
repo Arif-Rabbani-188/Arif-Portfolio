@@ -28,7 +28,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="py-16 min-h-screen px-4 bg-gradient-to-br from-teal-50 via-white to-green-100">
+        <section className="py-8 px-4 bg-gradient-to-br from-teal-50 via-white to-green-100">
             <div className="flex items-center justify-center mb-8">
                 <span className="block w-16 h-1 bg-gradient-to-r from-sky-400 to-purple-500 rounded-full mr-4"></span>
                 <h2 className="text-center text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-purple-600 tracking-wide uppercase drop-shadow-lg">
@@ -36,7 +36,7 @@ const Projects = () => {
                 </h2>
                 <span className="block w-16 h-1 bg-gradient-to-l from-sky-400 to-purple-500 rounded-full ml-4"></span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-11/12 mx-auto">
+            <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-11/12 mx-auto">
                 {projects.map((project, idx) => (
                     <div
                         key={idx}

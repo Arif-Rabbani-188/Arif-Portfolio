@@ -22,15 +22,15 @@ const skillList = [
 
 const Skills = () => {
     return (
-        <section className="bg-slate-50 rounded-2xl md:p-8 w-full mx-auto shadow-lg overflow-hidden py-32 items-center justify-center">
-            <div className="flex items-center justify-center mb-8">
+        <section className="bg-slate-50 rounded-2xl md:p-8 w-full mx-auto shadow-lg overflow-hidden py-5 md:py-8 items-center justify-center">
+            <div className="flex items-center justify-center ">
                 <span className="block w-16 h-1 bg-gradient-to-r from-sky-400 to-purple-500 rounded-full mr-4"></span>
                 <h2 className="text-center text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-purple-600 tracking-wide uppercase drop-shadow-lg">
                     Skills
                 </h2>
                 <span className="block w-16 h-1 bg-gradient-to-l from-sky-400 to-purple-500 rounded-full ml-4"></span>
             </div>
-            <div className="w-full flex flex-wrap justify-center gap-3 md:gap-8">
+            <div className="w-full flex flex-wrap justify-center gap-3 md:gap-8 py-8">
                 {skillList.map((skill, idx) => (
                     <div
                         key={skill.name + idx}
