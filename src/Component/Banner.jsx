@@ -68,13 +68,13 @@ return (
                     <TypewriterComponent
                         options={{
                             strings: [
-                                "React Enthusiast ⚛️",
-                                "Performance Optimizer 🚦",
-                                "Problem Solver 🧩",
-                                "MERN Stack Developer 🌐",
-                                "MongoDB Architect 🍃",
-                                "Express.js Backend Builder 🚀",
-                                "Node.js API Creator 🟢"
+                                "--React Enthusiast--",
+                                "--Performance Optimizer--",
+                                "--Problem Solver--",
+                                "--MERN Stack Developer--",
+                                "--MongoDB Architect--",
+                                "--Express.js Backend Builder--",
+                                "--Node.js API Creator--"
                             ],
                             autoStart: true,
                             loop: true,
