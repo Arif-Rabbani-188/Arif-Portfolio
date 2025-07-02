@@ -8,6 +8,7 @@ import Skills from './Component/Skills'
 import Projects from './Component/Projects'
 import SendMail from './Component/SendMail'
 import Footer from './Component/Footer'
+import Education from './Component/Education'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Banner></Banner>
       <Skills></Skills>
       <Projects></Projects>
+      <Education></Education>
       <SendMail></SendMail>
       <Footer></Footer>
     </div>
