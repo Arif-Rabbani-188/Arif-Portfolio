@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap, FaFigma } from 'react-icons/fa';
 import { FcLinux } from 'react-icons/fc';
-import { SiRedux, SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiVercel, SiPostman, SiNpm, SiAxios, SiSocketdotio, SiVscodium, SiLinux, SiDaisyui } from 'react-icons/si';
+import { SiRedux, SiTailwindcss, SiExpress, SiMongodb, SiMongoose, SiVercel, SiPostman, SiNpm, SiAxios, SiSocketdotio, SiVscodium, SiLinux, SiDaisyui, SiC, SiFortran } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 
 const skillList = [
@@ -22,6 +22,8 @@ const skillList = [
     { name: 'NPM', icon: <SiNpm className="text-red-600" /> },
     { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
     {name: "VSCode", icon:<VscVscode className="text-blue-600" />},
+    {name: "C", icon:<SiC></SiC>},
+    {name: "Fortrn", icon:<SiFortran />},
     {name: "Linux", icon:<FcLinux />},
 ];
 

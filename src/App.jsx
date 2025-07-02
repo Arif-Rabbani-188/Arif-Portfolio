@@ -9,6 +9,7 @@ import Projects from './Component/Projects'
 import SendMail from './Component/SendMail'
 import Footer from './Component/Footer'
 import Education from './Component/Education'
+import AboutMe from './Component/AboutMe'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
     <div>
       <Navbar></Navbar>
       <Banner></Banner>
+      <AboutMe></AboutMe>
       <Skills></Skills>
       <Projects></Projects>
       <Education></Education>
