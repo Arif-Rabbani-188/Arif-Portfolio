@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SectionHeading from './SectionHeading';
 import { SiGithub, SiLinkedin, SiMailboxdotorg, SiWhatsapp } from "react-icons/si";
 import { send } from 'emailjs-com';
 
@@ -34,14 +35,8 @@ const SendMail = () => {
  
 
   return (
-    <section className="p-8 py-8 flex flex-col justify-center items-center bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-3xl shadow-2xl">
-      <div className="flex items-center justify-center mb-8">
-        <span className="block w-16 h-1 bg-gradient-to-r from-sky-400 to-purple-500 rounded-full mr-4"></span>
-        <h2 className="text-center text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-purple-600 tracking-wide uppercase drop-shadow-lg">
-            Contact Me
-        </h2>
-        <span className="block w-16 h-1 bg-gradient-to-l from-sky-400 to-purple-500 rounded-full ml-4"></span>
-      </div>
+  <section id="contact" className="p-8 py-8 flex flex-col justify-center items-center bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-3xl shadow-2xl scroll-mt-24">
+  <SectionHeading title="Contact Me" subtitle="Let’s build or brainstorm something together" />
       <div className="flex flex-col md:flex-row gap-12 py-16 items-center w-11/12 max-w-5xl mx-auto">
         {/* Left: Text */}
         <div className="md:w-1/2 w-full mb-10 md:mb-0">

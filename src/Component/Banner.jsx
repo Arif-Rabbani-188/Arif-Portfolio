@@ -9,8 +9,8 @@ const Banner = () => {
     const name = "KHAN MAHMUD ARIF RABBANI";
 
     return (
-        <div>
-            <div className="relative overflow-hidden shadow-2xl bg-gradient-to-r from-[#0a2342] via-[#193660] to-[#2e3a59] py-10 px-3 md:py-16 md:px-12 lg:px-32 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-5 justify-between">
+        <div id="home">
+            <div className="relative overflow-hidden shadow-2xl bg-gradient-to-r from-[#0a2342] via-[#193660] to-[#2e3a59] py-10 px-4 sm:px-6 md:py-16 md:px-12 lg:px-20 xl:px-32 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-8 justify-between scroll-mt-24">
                 {/* Decorative SVGs */}
                 <svg
                     className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
@@ -133,13 +133,13 @@ const Banner = () => {
                 </motion.div>
                 {/* Right: Picture */}
                 <motion.div
-                    className="relative z-10 flex-1 flex justify-center md:justify-end md:mt-0 mb-8 md:mb-0"
+                    className="relative z-10 flex-1 flex justify-center md:justify-end md:mt-0 mb-8 md:mb-0 w-full"
                     initial={{ opacity: 0, x: 80 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <motion.div
-                        className="w-96 lg:h-[600px] lg:w-[600px] h-96 rounded-2xl border-8 border-white/40 shadow-xl overflow-hidden bg-white/20 flex items-center justify-center"
+                        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-square lg:aspect-[5/6] rounded-2xl border-8 border-white/40 shadow-xl overflow-hidden bg-white/20 flex items-center justify-center"
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.7, duration: 1, type: "spring" }}

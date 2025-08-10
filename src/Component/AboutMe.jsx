@@ -1,30 +1,91 @@
 import React from 'react';
+import SectionHeading from './SectionHeading';
 
 const AboutMe = () => {
     return (
-        <section className="p-4 sm:p-8 md:p-10 bg-white rounded-2xl shadow-xl py-12">
-            <div className="flex items-center justify-center mb-8">
-                <span className="block w-16 h-1 bg-gradient-to-r from-sky-400 to-purple-500 rounded-full mr-4"></span>
-                <h2 className="text-center text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-purple-600 tracking-wide uppercase drop-shadow-lg">
-                    About Me
-                </h2>
-                <span className="block w-16 h-1 bg-gradient-to-l from-sky-400 to-purple-500 rounded-full ml-4"></span>
+        <section
+            id="about"
+            className="scroll-mt-24 bg-white rounded-2xl shadow md:shadow-lg w-full px-5 sm:px-8 md:px-14 py-10 md:py-14"
+        >
+            <SectionHeading title="About Me" subtitle="Thoughtful builder. Curious learner. Human first." />
+
+            {/* Narrative blocks */}
+            <div className="space-y-6 text-slate-700 leading-relaxed text-[15px] md:text-lg">
+                <p>
+                    My journey into programming didn&apos;t start with a textbook—it started with
+                    curiosity. I wanted to know <span className="font-semibold">why things worked</span>.
+                    Physics gave me a habit of modeling complex systems. Code gave me a fast feedback loop.
+                    The moment I built a tiny component and watched state flow through it, I knew I could
+                    turn ideas into something people could actually use.
+                </p>
+                <p>
+                    I began by assembling small UIs, then evolved into crafting full <span className="font-semibold text-emerald-600">MERN stack</span> apps—
+                    thinking in data shapes, designing API boundaries, and refining the subtle interactions
+                    that make a product feel intentional. Lately I&apos;m layering in <span className="font-semibold text-emerald-600">Python + ML</span> fundamentals:
+                    rebuilding linear algebra intuition, experimenting with model behavior, and asking
+                    better questions about performance and bias.
+                </p>
+                <p>
+                    The work I enjoy most lives at the intersection of <span className="font-semibold">clean architecture</span>,
+                    <span className="font-semibold"> usable interfaces</span>, and <span className="font-semibold">measurable impact</span>. I like:
+                </p>
+                <ul className="list-disc ml-6 space-y-1 text-[15px] md:text-[17px]">
+                    <li>Designing APIs & data flows that stay flexible as features grow</li>
+                    <li>Improving perceived performance with smart loading + skeletons</li>
+                    <li>Untangling messy components into composable patterns</li>
+                    <li>Making UI states (error / empty / loading) feel deliberate</li>
+                </ul>
+                <p className="bg-gradient-to-r from-sky-50 to-emerald-50 border border-slate-200 rounded-xl p-4 md:p-5 text-slate-800 shadow-sm">
+                    <span className="font-semibold text-sky-700">Core mindset:</span> If I can reveal
+                    the underlying rule, I can redesign the experience to feel lighter for the next
+                    person using it.
+                </p>
+                <p>
+                    Personality wise: I&apos;m calm under ambiguity, persistent with tricky bugs, generous in
+                    code reviews, and I like shipping things that make someone say, <span className="italic">“Whoa, that felt smoother than I expected.”</span>
+                </p>
+                <p>
+                    While I don&apos;t yet have formal professional job experience, I make up for it with a <span className="font-semibold">fast learning loop</span> and
+                    disciplined practice. Every project in this portfolio was an intentional challenge: new patterns, deeper data flow design,
+                    or performance constraints I hadn&apos;t solved before. I document what I learn, refactor aggressively, and move to the next
+                    layer—so I ramp quickly when dropped into a real codebase.
+                </p>
             </div>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
-                Hello! I’m <span className="font-semibold text-blue-700">Khan Mahmud Arif Rabbani</span>, a curious mind at the intersection of science and technology. As a <span className="font-semibold text-blue-800">Physics student at the University of Rajshahi</span>, I thrive on unraveling the mysteries of the universe—whether it’s quantum mechanics or the elegance of a well-written algorithm.
-            </p>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
-                When I’m not exploring the laws of nature, I’m channeling my creativity as a <span className="text-blue-800 font-semibold">MERN stack developer</span>. I love transforming complex ideas into interactive, user-friendly web applications—blending logic, design, and a touch of scientific curiosity. My projects are where code meets creativity, and every bug is just another puzzle waiting to be solved!
-            </p>
-            <div className="flex items-center my-6">
-                <span className="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500 mr-3"></span>
-                <span className="text-blue-600 font-semibold">Physics fuels my logic. Code powers my creativity.</span>
+
+            {/* Snapshot cards */}
+            <div className="mt-10 grid sm:grid-cols-3 gap-4 text-sm md:text-base">
+                <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                    <h4 className="font-semibold text-slate-800 mb-1">Current Focus</h4>
+                    <ul className="list-disc ml-5 space-y-1">
+                        <li>API performance & caching</li>
+                        <li>MongoDB schema design</li>
+                        <li>Accessible React patterns</li>
+                        <li>ML building blocks</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                    <h4 className="font-semibold text-slate-800 mb-1">Values</h4>
+                    <ul className="list-disc ml-5 space-y-1">
+                        <li>Clarity over cleverness</li>
+                        <li>Iteration over perfection</li>
+                        <li>Empathy over ego</li>
+                        <li>Consistency over noise</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                    <h4 className="font-semibold text-slate-800 mb-1">Toolbox</h4>
+                    <ul className="list-disc ml-5 space-y-1">
+                        <li>MERN + REST</li>
+                        <li>JWT / Auth flows</li>
+                        <li>State modeling</li>
+                        <li>Python notebooks</li>
+                    </ul>
+                </div>
             </div>
-            <h3 className="mt-8 text-lg sm:text-xl font-semibold text-blue-800">Personality &amp; Goals</h3>
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mt-2">
-                Driven by curiosity and a passion for discovery, I enjoy collaborating with others to build solutions that matter. My goal is to bridge the gap between science and technology—creating digital experiences that are as intuitive as they are innovative. I believe in lifelong learning, teamwork, and the magic that happens when diverse ideas collide.
+
+            <p className="mt-10 text-center text-sm md:text-base text-slate-500">
+                Always exploring. Always refining. Still excited by the next small improvement.
             </p>
-            
         </section>
     );
 };
